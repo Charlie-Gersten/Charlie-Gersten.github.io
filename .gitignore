@@ -1,0 +1,5 @@
+# Original Wix downloads (~420 MB), screenshots, browser profile
+_raw/
+# Third-party upscaler binaries
+_tools/esrgan/
+__pycache__/

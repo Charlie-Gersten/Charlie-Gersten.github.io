@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charlie Gersten · Design Engineer</title>
+  <meta name="description" content="Portfolio of Charlie Gersten, a mechanical design engineer working across product design, mechatronics and sustainable engineering.">
+  <meta property="og:title" content="Charlie Gersten · Design Engineer">
+  <meta property="og:description" content="Mechanical design, mechatronics and sustainable engineering projects.">
+  <meta property="og:image" content="assets/img/sbr-cad-iso.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b4f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Charlie Gersten</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#making">Making</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-text">
+      <p class="eyebrow">Design Engineer · Mechanical · Mechatronics · Sustainability</p>
+      <h1>I design, build and test things that work in the real world.</h1>
+      <p class="lead">
+        I'm a First Class Mechanical Engineering Design graduate from the University of Bristol, now a
+        Junior Design Engineer at <strong>Grove Design</strong>. I take products from concept CAD through prototyping,
+        wiring and testing.
+      </p>
+      <p class="lead">
+        I'm looking for roles in <strong>sustainable engineering, product design, mechatronics and mechanical
+        design</strong>. In April 2027 I'm joining GoGo Electric in Uganda for a placement on battery management
+        systems and battery repair.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn" href="mailto:CharlieGersten@outlook.com">CharlieGersten@outlook.com</a>
+      </div>
+    </div>
+    <figure class="hero-sketch" aria-hidden="true">
+      <img src="assets/img/sketch-mouse-thumb.jpg" alt="">
+    </figure>
+  </section>
+
+  <div class="wrap">
+    <section class="facts" aria-label="At a glance">
+      <div><span>Education</span>BEng Mechanical Engineering Design, First Class, Bristol</div>
+      <div><span>Experience</span>2+ years in product design &amp; development</div>
+      <div><span>CAD</span>SolidWorks · Fusion 360 · KiCad · Abaqus</div>
+      <div><span>Build</span>3D printing · laser cutting · wiring · Python / C++ (ESP32, Arduino)</div>
+    </section>
+  </div>
+
+  <section id="projects" class="wrap section">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p>Select a project for details.</p>
+    </div>
+    <div class="grid" id="project-grid"></div>
+  </section>
+
+  <section id="making" class="wrap section">
+    <div class="section-head">
+      <h2>Making</h2>
+      <p>Furniture and objects, mostly built from reclaimed or local materials.</p>
+    </div>
+    <div class="making" id="making-grid"></div>
+  </section>
+
+</main>
+
+<footer id="contact" class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <h2>Let's talk</h2>
+      <p>Open to roles in sustainability, design, mechatronics and mechanical engineering. CV and references on request.</p>
+    </div>
+    <a class="btn primary" href="mailto:CharlieGersten@outlook.com">CharlieGersten@outlook.com</a>
+  </div>
+</footer>
+
+<dialog id="project-dialog" class="project-dialog">
+  <button class="close" aria-label="Close">×</button>
+  <div id="project-body"></div>
+</dialog>
+
+<dialog id="lightbox" class="lightbox">
+  <button class="close" aria-label="Close">×</button>
+  <img id="lightbox-img" alt="">
+  <p id="lightbox-cap"></p>
+</dialog>
+
+<script src="assets/content.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
