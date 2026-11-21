@@ -3,3 +3,4 @@ _raw/
 # Third-party upscaler binaries
 _tools/esrgan/
 __pycache__/
+_preview.html

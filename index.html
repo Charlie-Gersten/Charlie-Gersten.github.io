@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Charlie Gersten · Design Engineer</title>
-  <meta name="description" content="Portfolio of Charlie Gersten, a mechanical design engineer working across product design, mechatronics and sustainable engineering.">
+  <meta name="description" content="Charlie Gersten, a design engineer who enjoys turning ideas into things that make life, and the planet, a little better.">
   <meta property="og:title" content="Charlie Gersten · Design Engineer">
-  <meta property="og:description" content="Mechanical design, mechatronics and sustainable engineering projects.">
+  <meta property="og:description" content="Product design, mechatronics and sustainable engineering projects.">
   <meta property="og:image" content="assets/img/sbr-cad-iso.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b4f'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23b4532a'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,100&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -31,48 +31,55 @@
 
   <section class="hero wrap">
     <div class="hero-text">
-      <p class="eyebrow">Design Engineer · Mechanical · Mechatronics · Sustainability</p>
-      <h1>I design, build and test things that work in the real world.</h1>
+      <p class="hello">Hi, I'm Charlie, a design engineer.</p>
+      <h1>I love turning ideas into things that make life, and the planet, a little better.</h1>
       <p class="lead">
-        I'm a First Class Mechanical Engineering Design graduate from the University of Bristol, now a
-        Junior Design Engineer at <strong>Grove Design</strong>. I take products from concept CAD through prototyping,
-        wiring and testing.
+        I'm a First Class Mechanical Engineering Design graduate from the University of Bristol and a
+        Junior Design Engineer at <strong>Grove Design</strong>. I enjoy taking concepts from early sketches all the
+        way to working prototypes, using creativity and hands-on experience to get there.
       </p>
       <p class="lead">
-        I'm looking for roles in <strong>sustainable engineering, product design, mechatronics and mechanical
-        design</strong>. In April 2027 I'm joining GoGo Electric in Uganda for a placement on battery management
-        systems and battery repair.
+        I'm especially interested in <strong>sustainability</strong> and in improving the whole lifecycle of a product,
+        from materials and manufacture to repair and reuse. Away from my desk I'm happiest outdoors climbing
+        and hiking, or turning reclaimed materials into furniture.
       </p>
       <div class="cta">
-        <a class="btn primary" href="#projects">See projects</a>
-        <a class="btn" href="mailto:CharlieGersten@outlook.com">CharlieGersten@outlook.com</a>
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/charlie-gersten-95383b293/" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="mailto:CharlieGersten@outlook.com">Email me</a>
       </div>
     </div>
-    <figure class="hero-sketch" aria-hidden="true">
-      <img src="assets/img/sketch-mouse-thumb.jpg" alt="">
+    <figure class="hero-visual" id="hero-visual">
+      <!-- Drop a photo at assets/img/charlie.jpg and it appears here; until then the sketch shows. -->
+      <img class="photo" src="assets/img/charlie.jpg" alt="Charlie Gersten"
+           onerror="document.getElementById('hero-visual').classList.add('no-photo')">
+      <img class="sketch" src="assets/img/sketch-mouse-thumb.jpg" alt="" aria-hidden="true">
     </figure>
   </section>
 
   <div class="wrap">
     <section class="facts" aria-label="At a glance">
-      <div><span>Education</span>BEng Mechanical Engineering Design, First Class, Bristol</div>
-      <div><span>Experience</span>2+ years in product design &amp; development</div>
-      <div><span>CAD</span>SolidWorks · Fusion 360 · KiCad · Abaqus</div>
-      <div><span>Build</span>3D printing · laser cutting · wiring · Python / C++ (ESP32, Arduino)</div>
+      <div><span>Studied</span>Mechanical Engineering Design, First Class, University of Bristol</div>
+      <div><span>Experience</span>2+ years in product design and development</div>
+      <div><span>Design tools</span>SolidWorks, Fusion 360, KiCad, Abaqus</div>
+      <div><span>Hands-on</span>3D printing, laser cutting, wiring, Python and C++ (ESP32, Arduino)</div>
     </section>
   </div>
 
   <section id="projects" class="wrap section">
     <div class="section-head">
-      <h2>Projects</h2>
-      <p>Select a project for details.</p>
+      <h2>Things I've worked on</h2>
+      <p>Click a project to see more.</p>
     </div>
     <div class="grid" id="project-grid"></div>
   </section>
 
   <section id="making" class="wrap section">
     <div class="section-head">
-      <h2>Making</h2>
+      <h2>Things I've made</h2>
       <p>Furniture and objects, mostly built from reclaimed or local materials.</p>
     </div>
     <div class="making" id="making-grid"></div>
@@ -83,10 +90,13 @@
 <footer id="contact" class="footer">
   <div class="wrap footer-inner">
     <div>
-      <h2>Let's talk</h2>
-      <p>Open to roles in sustainability, design, mechatronics and mechanical engineering. CV and references on request.</p>
+      <h2>Say hello</h2>
+      <p>I'm always happy to chat about design, sustainability or a project you're working on. CV and references on request.</p>
     </div>
-    <a class="btn primary" href="mailto:CharlieGersten@outlook.com">CharlieGersten@outlook.com</a>
+    <div class="cta">
+      <a class="btn primary" href="mailto:CharlieGersten@outlook.com">CharlieGersten@outlook.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/charlie-gersten-95383b293/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
   </div>
 </footer>
 
