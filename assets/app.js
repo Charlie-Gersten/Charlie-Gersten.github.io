@@ -6,8 +6,7 @@
   const dlg = document.getElementById('project-dialog');
   const body = document.getElementById('project-body');
   const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightbox-img');
-  const lbCap = document.getElementById('lightbox-cap');
+  const lbImgs = document.getElementById('lightbox-imgs');
 
   const tags = (t) => `<div class="tags">${t.map((x) => `<span class="tag">${esc(x)}</span>`).join('')}</div>`;
 
@@ -62,28 +61,36 @@
   dlg.querySelector('.close').addEventListener('click', closeProject);
   dlg.addEventListener('click', (e) => { if (e.target === dlg) closeProject(); });
 
-  // Lightbox
-  function openLightbox(src, cap) {
-    lbImg.src = src; lbImg.alt = cap || ''; lbCap.textContent = cap || '';
+  // Lightbox: shows one or more images side by side, each with a caption
+  function openLightbox(views) {
+    lbImgs.classList.toggle('multi', views.length > 1);
+    lbImgs.innerHTML = views.map((v) =>
+      `<figure><img src="${v.src}" alt="${esc(v.cap || '')}"><figcaption>${esc(v.cap || '')}</figcaption></figure>`
+    ).join('');
     lb.showModal();
   }
   body.addEventListener('click', (e) => {
     const img = e.target.closest('img[data-full]');
-    if (img) openLightbox(img.dataset.full, img.alt);
+    if (img) openLightbox([{ src: img.dataset.full, cap: img.alt }]);
   });
   lb.addEventListener('click', () => lb.close());
 
   // Making + sketchbook grids
-  const tiles = (list) => list.map((m) => `
-    <figure class="make" data-full="${IMG(m.img)}" data-cap="${esc(m.title + ': ' + m.cap)}">
-      <img src="${IMG(m.img, true)}" alt="${esc(m.title)}" loading="lazy">
+  const lists = { making: MAKING, sketches: window.SKETCHES || [] };
+  const tiles = (key) => lists[key].map((m, i) => `
+    <figure class="make" data-list="${key}" data-i="${i}">
+      <div class="make-img"><img src="${IMG(m.img, true)}" alt="${esc(m.title)}" loading="lazy">${m.badge ? `<span class="badge">${esc(m.badge)}</span>` : ''}</div>
       <figcaption><b>${esc(m.title)}</b>${esc(m.cap)}</figcaption>
     </figure>`).join('');
-  document.getElementById('making-grid').innerHTML = tiles(MAKING);
-  document.getElementById('sketch-grid').innerHTML = tiles(window.SKETCHES || []);
+  document.getElementById('making-grid').innerHTML = tiles('making');
+  document.getElementById('sketch-grid').innerHTML = tiles('sketches');
   document.addEventListener('click', (e) => {
     const f = e.target.closest('.make');
-    if (f) openLightbox(f.dataset.full, f.dataset.cap);
+    if (!f) return;
+    const m = lists[f.dataset.list][+f.dataset.i];
+    openLightbox(m.views
+      ? m.views.map((v) => ({ src: IMG(v.img), cap: v.cap }))
+      : [{ src: IMG(m.img), cap: `${m.title}: ${m.cap}` }]);
   });
 
   // Deep links: yoursite/#robot opens that project

@@ -3,6 +3,8 @@
    Images: name only (no extension) from assets/img/. Videos: assets/video/.
    fit: 'contain' shows the whole cover image (good for wide CAD renders);
    bg: '#hex' sets the colour behind a 'contain' cover.
+   Making items: add views: [{img, cap}, ...] to show several photos side by side when clicked,
+   and badge: 'text' for a small label on the tile.
 ------------------------------------------------------------------- */
 
 window.PROJECTS = [
@@ -143,8 +145,6 @@ window.PROJECTS = [
 window.SKETCHES = [
   { img: 'sketch-mouse', title: 'Mouse concept', cap: 'Form sketches for an ergonomic computer mouse.' },
   { img: 'speaker-sketches', title: 'Speaker', cap: 'Cabinet shapes and internal layout.' },
-  { img: 'fan-sketches', title: 'Solar fan', cap: 'Final design and manufacturing notes.' },
-  { img: 'fan-blade-concepts', title: 'Fan blades', cap: 'Blade and hub concepts.' },
 ];
 
 /* Furniture & making: reused and local materials */
@@ -154,7 +154,12 @@ window.MAKING = [
   { img: 'make-sofa-bed', title: 'Sofa Bed', cap: 'Scorched-pine futon with a pull-out frame.' },
   { img: 'make-tv-stand', title: 'TV Stand', cap: 'Formed flexi-ply with a slate top from a local mine.' },
   { img: 'make-rail', title: 'Clothing Rail', cap: 'Bent and soldered copper pipe with a hand-carved branch.' },
-  { img: 'make-bedside-oak', title: 'Bedside Tables', cap: 'Tiled cinder blocks, first topped with polished concrete, now remade into two bedside tables with tops cut from an old oak bench plank.' },
+  { img: 'make-bedside-oak', title: 'Bedside Tables', badge: 'Before & after',
+    cap: 'Tiled cinder blocks, first topped with polished concrete, now remade into two bedside tables with tops cut from an old oak bench plank.',
+    views: [
+      { img: 'make-bedside', cap: 'Before: one table with a hand-polished concrete top.' },
+      { img: 'make-bedside-oak', cap: 'Now: two bedside tables with tops cut from an old oak bench plank.' },
+    ] },
   { img: 'make-bowl', title: 'Ceramic Bowl', cap: 'Clay pressed into a textured wooden mould, glazed and fired.' },
   { img: 'make-lamp', title: 'Hand Lamp', cap: 'An existing CAD model, adapted and 3D printed.' },
 ];
