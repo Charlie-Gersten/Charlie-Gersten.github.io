@@ -73,13 +73,15 @@
   });
   lb.addEventListener('click', () => lb.close());
 
-  // Making grid
-  document.getElementById('making-grid').innerHTML = MAKING.map((m) => `
+  // Making + sketchbook grids
+  const tiles = (list) => list.map((m) => `
     <figure class="make" data-full="${IMG(m.img)}" data-cap="${esc(m.title + ': ' + m.cap)}">
       <img src="${IMG(m.img, true)}" alt="${esc(m.title)}" loading="lazy">
       <figcaption><b>${esc(m.title)}</b>${esc(m.cap)}</figcaption>
     </figure>`).join('');
-  document.getElementById('making-grid').addEventListener('click', (e) => {
+  document.getElementById('making-grid').innerHTML = tiles(MAKING);
+  document.getElementById('sketch-grid').innerHTML = tiles(window.SKETCHES || []);
+  document.addEventListener('click', (e) => {
     const f = e.target.closest('.make');
     if (f) openLightbox(f.dataset.full, f.dataset.cap);
   });

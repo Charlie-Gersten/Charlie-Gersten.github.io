@@ -139,6 +139,14 @@ window.PROJECTS = [
   },
 ];
 
+/* "From the sketchbook" section */
+window.SKETCHES = [
+  { img: 'sketch-mouse', title: 'Mouse concept', cap: 'Form sketches for an ergonomic computer mouse.' },
+  { img: 'speaker-sketches', title: 'Speaker', cap: 'Cabinet shapes and internal layout.' },
+  { img: 'fan-sketches', title: 'Solar fan', cap: 'Final design and manufacturing notes.' },
+  { img: 'fan-blade-concepts', title: 'Fan blades', cap: 'Blade and hub concepts.' },
+];
+
 /* Furniture & making: reused and local materials */
 window.MAKING = [
   { img: 'make-desk', title: 'Pommel Horse Desk', cap: 'Oak reclaimed from a neglected vintage pommel horse, keeping its handle holds.' },
@@ -146,7 +154,7 @@ window.MAKING = [
   { img: 'make-sofa-bed', title: 'Sofa Bed', cap: 'Scorched-pine futon with a pull-out frame.' },
   { img: 'make-tv-stand', title: 'TV Stand', cap: 'Formed flexi-ply with a slate top from a local mine.' },
   { img: 'make-rail', title: 'Clothing Rail', cap: 'Bent and soldered copper pipe with a hand-carved branch.' },
-  { img: 'make-bedside', title: 'Bedside Table', cap: 'Tiled cinder blocks with a polished concrete top.' },
+  { img: 'make-bedside-oak', title: 'Bedside Tables', cap: 'Tiled cinder blocks, first topped with polished concrete, now remade into two bedside tables with tops cut from an old oak bench plank.' },
   { img: 'make-bowl', title: 'Ceramic Bowl', cap: 'Clay pressed into a textured wooden mould, glazed and fired.' },
   { img: 'make-lamp', title: 'Hand Lamp', cap: 'An existing CAD model, adapted and 3D printed.' },
 ];

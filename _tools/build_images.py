@@ -79,6 +79,12 @@ IMAGES = {
     # Header sketch
     '9d5f6a5a8c264d9e8df52525cd98101c': 'sketch-mouse',
 }
+# Extra photos supplied directly (kept in _raw/extra, not committed): name -> (file, crop box or None)
+EXTRA = {
+    'charlie': ('graduation.jpg', (390, 300, 1290, 1425)),   # 4:5 portrait crop
+    'make-bedside-oak': ('bedside-oak.jpg', None),
+}
+
 VIDEOS = {
     'ee517e105663485cbab65806360fdde2': 'ragbot-linkage-test',
     '6549d0b71ec94a38918922f854f989c9': 'ragbot-final-test',
@@ -126,6 +132,14 @@ for mid, name in IMAGES.items():
     save(im, os.path.join(OUT, name + '.jpg'), MAX)
     save(im, os.path.join(OUT, name + '-thumb.jpg'), THUMB)
     report.append(f'{name:28} {how}')
+
+for name, (fn, box) in EXTRA.items():
+    im = flatten(Image.open(os.path.join('_raw/extra', fn)))
+    if box:
+        im = im.crop(box)
+    save(im, os.path.join(OUT, name + '.jpg'), MAX)
+    save(im, os.path.join(OUT, name + '-thumb.jpg'), THUMB)
+    report.append(f'{name:28} extra')
 
 for mid, name in VIDEOS.items():
     shutil.copyfile(os.path.join(RAW, P + mid + '.mp4'), os.path.join(VID, name + '.mp4'))

@@ -8,11 +8,12 @@
   <meta property="og:title" content="Charlie Gersten · Design Engineer">
   <meta property="og:description" content="Product design, mechatronics and sustainable engineering projects.">
   <meta property="og:image" content="assets/img/sbr-cad-iso.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23b4532a'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E">
+  <meta name="color-scheme" content="light only">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f8c8a4'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-weight='700' font-size='28' fill='%234a2c18' text-anchor='middle'%3ECG%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..700,100&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 
@@ -31,17 +32,18 @@
 
   <section class="hero wrap">
     <div class="hero-text">
-      <p class="hello">Hi, I'm Charlie, a design engineer.</p>
-      <h1>I love turning ideas into things that make life, and the planet, a little better.</h1>
+      <h1>Charlie Gersten</h1>
+      <p class="role">Design Engineer at Grove Design</p>
       <p class="lead">
-        I'm a First Class Mechanical Engineering Design graduate from the University of Bristol and a
-        Junior Design Engineer at <strong>Grove Design</strong>. I enjoy taking concepts from early sketches all the
-        way to working prototypes, using creativity and hands-on experience to get there.
+        I'm a First Class Mechanical Engineering Design graduate from the University of Bristol. I enjoy taking
+        concepts from early sketches all the way to working prototypes, using creativity and hands-on
+        experience to get there.
       </p>
       <p class="lead">
         I'm especially interested in <strong>sustainability</strong> and in improving the whole lifecycle of a product,
-        from materials and manufacture to repair and reuse. Away from my desk I'm happiest outdoors climbing
-        and hiking, or turning reclaimed materials into furniture.
+        from materials and manufacture to repair and reuse. Outside work I love climbing, hiking and being
+        outdoors, and being creative in the workshop, using reclaimed materials and learning new techniques
+        along the way.
       </p>
       <div class="cta">
         <a class="btn primary" href="#projects">See my projects</a>
@@ -52,11 +54,8 @@
         <a class="btn" href="mailto:CharlieGersten@outlook.com">Email me</a>
       </div>
     </div>
-    <figure class="hero-visual" id="hero-visual">
-      <!-- Drop a photo at assets/img/charlie.jpg and it appears here; until then the sketch shows. -->
-      <img class="photo" src="assets/img/charlie.jpg" alt="Charlie Gersten"
-           onerror="document.getElementById('hero-visual').classList.add('no-photo')">
-      <img class="sketch" src="assets/img/sketch-mouse-thumb.jpg" alt="" aria-hidden="true">
+    <figure class="hero-visual">
+      <img class="photo" src="assets/img/charlie-thumb.jpg" alt="Charlie Gersten at his graduation from the University of Bristol">
     </figure>
   </section>
 
@@ -80,9 +79,17 @@
   <section id="making" class="wrap section">
     <div class="section-head">
       <h2>Things I've made</h2>
-      <p>Furniture and objects, mostly built from reclaimed or local materials.</p>
+      <p>Being creative in the workshop, often with reclaimed or local materials.</p>
     </div>
     <div class="making" id="making-grid"></div>
+  </section>
+
+  <section id="sketches" class="wrap section">
+    <div class="section-head">
+      <h2>From the sketchbook</h2>
+      <p>Most of my projects start on paper.</p>
+    </div>
+    <div class="making sketches" id="sketch-grid"></div>
   </section>
 
 </main>
@@ -111,7 +118,7 @@
   <p id="lightbox-cap"></p>
 </dialog>
 
-<script src="assets/content.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/content.js?v=3"></script>
+<script src="assets/app.js?v=3"></script>
 </body>
 </html>
