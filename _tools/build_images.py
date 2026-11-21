@@ -79,10 +79,15 @@ IMAGES = {
     # Header sketch
     '9d5f6a5a8c264d9e8df52525cd98101c': 'sketch-mouse',
 }
-# Extra photos supplied directly (kept in _raw/extra, not committed): name -> (file, crop box or None)
+# Extra images supplied directly (kept in _raw/extra, not committed):
+# name -> (file, crop box or None, crisp) ; crisp=True keeps thin chart lines sharp
 EXTRA = {
-    'charlie': ('graduation.jpg', (390, 300, 1290, 1425)),   # 4:5 portrait crop
-    'make-bedside-oak': ('bedside-oak.jpg', None),
+    'charlie': ('graduation.jpg', (390, 300, 1290, 1425), False),   # 4:5 portrait crop
+    'make-bedside-oak': ('bedside-oak.jpg', None, False),
+    'textiles-paired': ('textiles-paired.png', None, True),
+    'textiles-boxplot': ('textiles-boxplot.png', None, True),
+    'textiles-differences': ('textiles-differences.png', None, True),
+    'textiles-order': ('textiles-order.png', None, True),
 }
 
 VIDEOS = {
@@ -109,10 +114,11 @@ def flatten(im):
     return im.convert('RGB')
 
 
-def save(im, path, edge):
+def save(im, path, edge, crisp=False):
     im = im.copy()
     im.thumbnail((edge, edge), Image.LANCZOS)
-    im.save(path, 'JPEG', quality=84, optimize=True, progressive=True)  # no exif passed -> stripped
+    opts = dict(quality=95, subsampling=0) if crisp else dict(quality=84)
+    im.save(path, 'JPEG', optimize=True, progressive=True, **opts)  # no exif passed -> stripped
 
 
 os.makedirs(OUT, exist_ok=True)
@@ -133,12 +139,12 @@ for mid, name in IMAGES.items():
     save(im, os.path.join(OUT, name + '-thumb.jpg'), THUMB)
     report.append(f'{name:28} {how}')
 
-for name, (fn, box) in EXTRA.items():
+for name, (fn, box, crisp) in EXTRA.items():
     im = flatten(Image.open(os.path.join('_raw/extra', fn)))
     if box:
         im = im.crop(box)
-    save(im, os.path.join(OUT, name + '.jpg'), MAX)
-    save(im, os.path.join(OUT, name + '-thumb.jpg'), THUMB)
+    save(im, os.path.join(OUT, name + '.jpg'), MAX, crisp)
+    save(im, os.path.join(OUT, name + '-thumb.jpg'), THUMB, crisp)
     report.append(f'{name:28} extra')
 
 for mid, name in VIDEOS.items():

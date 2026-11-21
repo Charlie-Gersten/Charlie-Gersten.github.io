@@ -100,10 +100,20 @@ window.PROJECTS = [
     title: 'Textile Recycling Decision System',
     meta: 'Dissertation · 2026 · First',
     tags: ['Sustainability', 'Decision logic', 'Statistics'],
+    cover: 'textiles-paired',
+    fit: 'contain',
     summary:
       'Developed a logic-based decision system for sorting textiles for recycling, and used hypothesis testing to benchmark human sorting accuracy against automated technologies to show where each falls short.',
-    points: [],
-    gallery: [],
+    points: [
+      'Ran a counterbalanced study with 30 participants, each sorting both manually and with guidance, half in each order.',
+      'Used paired statistical analysis to compare time per item between conditions and check for order effects.',
+    ],
+    gallery: [
+      { img: 'textiles-paired', cap: 'Time per item for each participant, manual vs guided. The mean rose from about 14.7 s to 21.5 s.' },
+      { img: 'textiles-differences', cap: 'Paired differences: guidance added 6.8 s per item on average, and 28 of 30 participants were slower with it.' },
+      { img: 'textiles-boxplot', cap: 'Time per item by condition.' },
+      { img: 'textiles-order', cap: 'Order effect: the slowdown was larger for participants who used guidance first.' },
+    ],
   },
   {
     id: 'speaker',
